@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 215 25% 17%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 17%;
+
+    --primary: 217 91% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 213 27% 84%;
+    --secondary-foreground: 215 25% 17%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 174 85% 32%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom Classy tokens */
+    --navy: 213 90% 6%;
+    --navy-foreground: 210 40% 98%;
+    --blue: 217 91% 50%;
+    --blue-light: 213 88% 63%;
+    --sky: 213 90% 95%;
+    --teal: 174 85% 32%;
+    --teal-light: 170 76% 40%;
+    --amber: 38 92% 50%;
+    --off-white: 210 40% 98%;
+    --body-text: 215 25% 17%;
+    --mid-grey: 215 16% 47%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Instrument Serif', serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Instrument Serif', serif;
+  }
+  .font-body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Scroll reveal */
+.rev {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.rev.vis {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Frosted glass navbar */
+.navbar-glass {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: hsla(0, 0%, 100%, 0.82);
+  border-bottom: 1px solid hsl(var(--border));
+}
+.navbar-glass.scrolled {
+  box-shadow: 0 1px 12px rgba(0,0,0,0.06);
+}
+
+/* Dot grid background */
+.dot-grid {
+  background-image: radial-gradient(circle, hsl(var(--border)) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Card hover lift */
+.card-lift {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+.card-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px -8px rgba(0,0,0,0.1);
+}
+
+/* Pulse badge animation */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.5); }
+}
+.pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Dark card glass */
+.dark-glass-card {
+  background: linear-gradient(135deg, hsla(213, 90%, 10%, 0.7), hsla(213, 90%, 6%, 0.9));
+  border: 1px solid hsla(213, 90%, 30%, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+/* Section spacing */
+.section-pad {
+  padding: 6rem 5vw;
+}
+
+@media (max-width: 920px) {
+  .section-pad {
+    padding: 3rem 5vw;
+  }
+}
+
+.legal-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: hsl(var(--foreground));
+}
+.legal-content h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: hsl(var(--foreground));
+}
+.legal-content p {
+  margin-bottom: 0.75rem;
+  color: hsl(var(--mid-grey));
+  line-height: 1.75;
+}
+.legal-content ul, .legal-content ol {
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+}
+.legal-content li {
+  margin-bottom: 0.35rem;
+  color: hsl(var(--mid-grey));
+  line-height: 1.7;
+}
+.legal-content strong {
+  color: hsl(var(--foreground));
+}
