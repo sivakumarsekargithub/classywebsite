@@ -17,9 +17,9 @@ export function Footer({ onNavigate }: FooterProps) {
           </button>
           <div className="flex flex-wrap gap-4 text-sm">
             <button onClick={() => onNavigate("home")} className="hover:text-navy-foreground transition-colors">Home</button>
-            <button onClick={() => onNavigate("pilot")} className="hover:text-navy-foreground transition-colors">Pilot</button>
             <button onClick={() => onNavigate("who")} className="hover:text-navy-foreground transition-colors">Who Needs Classy</button>
             <button onClick={() => onNavigate("why")} className="hover:text-navy-foreground transition-colors">Why Classy</button>
+            <button onClick={() => onNavigate("pricing")} className="hover:text-navy-foreground transition-colors">Pricing</button>
             <button onClick={() => onNavigate("getapp")} className="hover:text-navy-foreground transition-colors">Get the App</button>
             <button onClick={() => onNavigate("signup")} className="hover:text-navy-foreground transition-colors">Contact</button>
           </div>

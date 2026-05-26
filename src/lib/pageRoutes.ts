@@ -1,12 +1,11 @@
 export const pageRoutePaths = {
   home: "/",
-  stakeholders: "/stakeholders",
-  pilot: "/pilot-program",
   resources: "/resources",
   signup: "/signup",
   getapp: "/get-the-app",
   who: "/who-needs-classy",
   why: "/why-classy",
+  pricing: "/pricing",
 } as const;
 
 export type MarketingPageType = keyof typeof pageRoutePaths;

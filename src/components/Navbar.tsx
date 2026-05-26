@@ -8,12 +8,9 @@ interface NavbarProps {
 }
 
 const navLinks = [
-  { id: "home", label: "Home" },
-  { id: "stakeholders", label: "Stakeholders" },
-  { id: "pilot", label: "Pilot Program" },
   { id: "who", label: "Who Needs Classy" },
   { id: "why", label: "Why Classy" },
-  { id: "resources", label: "Resources" },
+  { id: "pricing", label: "Pricing" },
   { id: "getapp", label: "Get the App" },
 ];
 
@@ -52,12 +49,6 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
               {l.label}
             </button>
           ))}
-          <button
-            onClick={() => navigate("signup")}
-            className="bg-blue text-primary-foreground rounded-lg px-5 py-2 text-sm font-body font-semibold hover:brightness-110 transition-all shadow-sm"
-          >
-            Get Early Access
-          </button>
         </div>
 
         {/* Mobile toggle */}
@@ -83,12 +74,6 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
               {l.label}
             </button>
           ))}
-          <button
-            onClick={() => navigate("signup")}
-            className="bg-blue text-primary-foreground rounded-lg px-5 py-2.5 text-sm font-body font-semibold mt-2"
-          >
-            Get Early Access
-          </button>
         </div>
       )}
     </nav>

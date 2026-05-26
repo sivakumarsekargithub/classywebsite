@@ -11,6 +11,8 @@ const staticRoutes = [
   "resources",
   "signup",
   "contact",
+  "pricing",
+  "plans",
   "get-the-app",
   "get-app",
   "getapp",

@@ -68,11 +68,11 @@ export function HomePage({ onNavigate }: HomePageProps) {
             Classy connects teachers, parents, and students on one intelligent platform &mdash; reducing administrative burden, closing visibility gaps, and putting learning back at the centre.
           </p>
           <div className="rev flex flex-wrap justify-center gap-4 mb-16">
-            <button onClick={() => onNavigate("signup")} className="bg-blue text-primary-foreground rounded-lg px-6 py-3 text-sm font-body font-semibold hover:brightness-110 shadow-md shadow-blue/20 transition-all">
-              Get Early Access &rarr;
+            <button onClick={() => onNavigate("getapp")} className="bg-blue text-primary-foreground rounded-lg px-6 py-3 text-sm font-body font-semibold hover:brightness-110 shadow-md shadow-blue/20 transition-all">
+              Get the App &rarr;
             </button>
-            <button onClick={() => onNavigate("pilot")} className="border-2 border-blue text-blue rounded-lg px-6 py-3 text-sm font-body font-semibold hover:bg-blue hover:text-primary-foreground transition-all">
-              Apply for Pilot
+            <button onClick={() => onNavigate("pricing")} className="border-2 border-blue text-blue rounded-lg px-6 py-3 text-sm font-body font-semibold hover:bg-blue hover:text-primary-foreground transition-all">
+              See Pricing
             </button>
           </div>
           <div className="rev border-t border-border pt-8">
@@ -119,8 +119,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
             <p className="text-mid-grey font-body mb-8 leading-relaxed">
               Insights gathered from extensive interviews with parents, students, teachers, and administrators across multiple educational institutes.
             </p>
-            <button onClick={() => onNavigate("resources")} className="bg-blue text-primary-foreground rounded-lg px-6 py-3 text-sm font-body font-semibold hover:brightness-110 shadow-md shadow-blue/20 transition-all">
-              Read the Research Reports
+            <button onClick={() => onNavigate("getapp")} className="bg-blue text-primary-foreground rounded-lg px-6 py-3 text-sm font-body font-semibold hover:brightness-110 shadow-md shadow-blue/20 transition-all">
+              Get the App &rarr;
             </button>
           </div>
           <div className="grid gap-4">
@@ -154,7 +154,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
         </div>
       </section>
 
-      {/* Stakeholders Preview */}
+      {/* Who It's For Preview */}
       <section className="section-pad bg-off-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 rev">
@@ -165,7 +165,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             {stakeholderCards.map((s, i) => (
               <button
                 key={i}
-                onClick={() => onNavigate("stakeholders")}
+                onClick={() => onNavigate("who")}
                 className="rev bg-card rounded-xl p-6 border border-border card-lift text-left group"
                 style={{ transitionDelay: `${i * 80}ms` }}
               >

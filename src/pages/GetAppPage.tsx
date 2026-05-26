@@ -1,67 +1,162 @@
 import { useState, useRef } from "react";
 import { SectionChip } from "@/components/SectionChip";
-import { PillButton } from "@/components/PillButton";
 import { Check, Smartphone, Apple, Download } from "lucide-react";
 
 interface GetAppPageProps {
   onNavigate: (page: string) => void;
 }
 
-function PhoneMockup() {
+function CommunityFormPreview({ onNavigate }: GetAppPageProps) {
   return (
-    <div className="relative mx-auto w-[260px] md:w-[300px]">
-      <svg viewBox="0 0 300 600" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full drop-shadow-2xl">
-        <rect x="4" y="4" width="292" height="592" rx="36" fill="hsl(var(--navy))" stroke="hsl(var(--border))" strokeWidth="4"/>
-        <rect x="100" y="12" width="100" height="24" rx="12" fill="hsl(213 90% 10%)"/>
-        <rect x="16" y="48" width="268" height="504" rx="8" fill="hsl(var(--background))"/>
-        {/* Header */}
-        <rect x="16" y="48" width="268" height="52" rx="8" fill="hsl(var(--navy))"/>
-        <text x="150" y="80" textAnchor="middle" fill="hsl(var(--navy-foreground))" fontFamily="'Instrument Serif', serif" fontStyle="italic" fontSize="20">Classy</text>
-        {/* Cards */}
+    <div className="rounded-2xl border border-border bg-card p-6 shadow-xl shadow-navy/5">
+      <h3 className="text-3xl font-display text-foreground">Join the Classy Community</h3>
+      <p className="mt-3 text-sm font-body text-mid-grey leading-relaxed">
+        Sign up below to get access, stay updated, and be the first to know when we go live on Play Store and App Store.
+      </p>
+
+      <div className="mt-6 h-[440px] overflow-y-auto rounded-xl border border-border bg-[#f1eefc] p-4">
+        <div className="overflow-hidden rounded-lg bg-card shadow-sm">
+          <div className="h-3 bg-[#673ab7]" />
+          <div className="border-b border-border p-5">
+            <h4 className="text-3xl font-body font-semibold text-foreground">Users - Classy</h4>
+            <p className="mt-5 text-sm font-body font-semibold text-mid-grey">
+              public.acc2001@gmail.com <span className="font-normal text-blue underline">Switch account</span>
+            </p>
+            <p className="mt-3 text-sm font-body text-mid-grey">Not shared</p>
+          </div>
+          <div className="p-5 text-sm font-body text-destructive">* Indicates required question</div>
+        </div>
+
         {[
-          { y: 114, icon: "✅", text: "Attendance marked", sub: "Priya present today", badge: "Present", color: "hsl(var(--teal))" },
-          { y: 200, icon: "📝", text: "Maths assignment", sub: "Due tomorrow", badge: "Due", color: "hsl(var(--amber))" },
-          { y: 286, icon: "📢", text: "Annual Day", sub: "14th March", badge: "New", color: "hsl(var(--blue))" },
-        ].map((c, i) => (
-          <g key={i}>
-            <rect x="28" y={c.y} width="244" height="72" rx="12" fill="white" stroke="hsl(var(--border))" strokeWidth="1"/>
-            <text x="48" y={c.y + 28} fontSize="13" fontFamily="'Plus Jakarta Sans', sans-serif" fontWeight="600" fill="hsl(var(--foreground))">{c.icon} {c.text}</text>
-            <text x="48" y={c.y + 48} fontSize="11" fontFamily="'Plus Jakarta Sans', sans-serif" fill="hsl(var(--mid-grey))">{c.sub}</text>
-            <rect x="200" y={c.y + 16} width="60" height="24" rx="12" fill={c.color} opacity="0.15"/>
-            <text x="230" y={c.y + 33} textAnchor="middle" fontSize="10" fontWeight="600" fontFamily="'Plus Jakarta Sans', sans-serif" fill={c.color}>{c.badge}</text>
-          </g>
+          { label: "Name", required: true },
+          { label: "Phone (Whatsapp)", required: true },
+          { label: "Email", required: false },
+        ].map((field) => (
+          <div key={field.label} className="mt-4 rounded-lg bg-card p-5 shadow-sm">
+            <label className="text-base font-body font-medium text-foreground">
+              {field.label} {field.required && <span className="text-destructive">*</span>}
+            </label>
+            <div className="mt-10 w-1/2 min-w-[180px] border-b border-border pb-1 text-sm font-body text-mid-grey">Your answer</div>
+          </div>
         ))}
-        {/* Bottom tab bar */}
-        <rect x="16" y="500" width="268" height="52" rx="8" fill="white" stroke="hsl(var(--border))" strokeWidth="1"/>
-        {["🏠","✅","📝","💬","👤"].map((icon, i) => (
-          <text key={i} x={58 + i * 50} y="532" textAnchor="middle" fontSize="18">{icon}</text>
-        ))}
-      </svg>
+
+        <div className="mt-4 rounded-lg bg-card p-5 shadow-sm">
+          <p className="text-base font-body font-medium text-foreground">Who are you ? <span className="text-destructive">*</span></p>
+          {["Coach", "Teacher", "Parent", "Institute Owner", "Student"].map((role) => (
+            <label key={role} className="mt-5 flex items-center gap-3 text-sm font-body text-foreground">
+              <span className="h-5 w-5 rounded-sm border-2 border-mid-grey" />
+              {role}
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <p className="mt-4 text-xs font-body text-mid-grey">
+        By submitting this form you agree to our <button onClick={() => onNavigate("privacy")} className="text-blue">Privacy Policy</button> and{" "}
+        <button onClick={() => onNavigate("terms")} className="text-blue">Terms &amp; Conditions</button>.
+      </p>
+    </div>
+  );
+}
+
+const onboardingSteps = [
+  { number: "01", title: "Download", desc: "Get the Classy app from your native play store." },
+  { number: "02", title: "Select Your Role", desc: "Choose your identity from our dynamic persona cards." },
+  { number: "03", title: "Profile Setup", desc: "Fill in only the basic details needed for your role." },
+  { number: "04", title: "Get Started", desc: "Unlock your dashboard and start using Classy." },
+];
+
+const roleFeatures = [
+  {
+    label: "Teacher",
+    icon: "👩‍🏫",
+    title: "The Classroom Command Center",
+    desc: "Everything an educator needs to host and manage a learning ecosystem.",
+    chips: ["Classroom Owner: Create & Manage", "Smart Assignments", "Instant Broadcast Announcements", "Unified Timetable Schedules", "Digital Note Sharing Hub", "Automated Tests & Exams"],
+    previewTitle: "Grade 7A Dashboard",
+    stats: ["Attendance 32/34", "Assignments 78%", "Announcements 3 sent", "Tests Today 2"],
+  },
+  {
+    label: "Students",
+    icon: "🎓",
+    title: "Never Miss What Matters",
+    desc: "A clean daily view of assignments, exams, notes, schedules, and progress.",
+    chips: ["Assignment Feed", "Exam Calendar", "Progress Tracking", "Study Notes", "Deadline Alerts", "Class Timetable"],
+    previewTitle: "Student Today",
+    stats: ["Due Soon 3", "Attendance 94%", "Next Test Friday", "Notes 12 new"],
+  },
+  {
+    label: "Parents",
+    icon: "👨‍👩‍👧",
+    title: "Know Without Chasing",
+    desc: "Parents get reliable visibility into attendance, homework, results, and official updates.",
+    chips: ["Live Attendance", "Homework Updates", "Result Alerts", "Announcement Inbox", "Teacher Chat", "Calendar View"],
+    previewTitle: "Parent Snapshot",
+    stats: ["Present Today", "Homework 2 due", "Result 87%", "Messages 1 new"],
+  },
+  {
+    label: "Institutes",
+    icon: "🏛️",
+    title: "Institution-Level Control",
+    desc: "Management gets a bird's-eye view of classes, staff activity, attendance, and communication.",
+    chips: ["Admin Dashboard", "Batch Oversight", "Broadcasts", "Reports", "Staff Coordination", "Support Tools"],
+    previewTitle: "Institute Overview",
+    stats: ["Attendance 94%", "Classes 18 live", "Complaints 0", "Broadcast 91% read"],
+  },
+  {
+    label: "Courses & Skills",
+    icon: "🚀",
+    title: "Launch Learning Communities",
+    desc: "Course creators can publish learning paths, manage learners, and track outcomes.",
+    chips: ["Course Builder", "Learner Community", "Payments Ready", "Progress Reports", "Certificates", "No Commission"],
+    previewTitle: "Course Studio",
+    stats: ["Learners 126", "Completion 81%", "Revenue Yours", "Cohorts 4"],
+  },
+];
+
+function RolePreview({ role }: { role: (typeof roleFeatures)[number] }) {
+  return (
+    <div className="rounded-2xl border border-border bg-card p-6 shadow-xl shadow-navy/5">
+      <div className="rounded-xl border border-border p-5">
+        <div className="flex items-start justify-between gap-4 mb-5">
+          <div>
+            <h3 className="font-body font-bold text-foreground">{role.previewTitle}</h3>
+            <p className="text-xs font-body text-mid-grey">Today · live workspace</p>
+          </div>
+          <span className="rounded-lg bg-blue px-4 py-2 text-xs font-body font-bold text-primary-foreground">+ New</span>
+        </div>
+        <div className="grid grid-cols-2 gap-3">
+          {role.stats.map((stat, index) => (
+            <div
+              key={stat}
+              className={`rounded-lg p-4 text-sm font-body ${
+                index % 2 === 0 ? "bg-teal/10 text-teal" : "bg-blue/10 text-blue"
+              }`}
+            >
+              {stat}
+            </div>
+          ))}
+        </div>
+        <div className="mt-5 rounded-lg border border-border bg-off-white p-4">
+          <div className="flex items-center justify-between text-xs font-body text-mid-grey mb-2">
+            <span>Activity Progress</span>
+            <span>87%</span>
+          </div>
+          <div className="h-2 rounded-full bg-border overflow-hidden">
+            <div className="h-full w-[87%] rounded-full bg-blue" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
 export function GetAppPage({ onNavigate }: GetAppPageProps) {
-  const [waitlistEmail, setWaitlistEmail] = useState("");
-  const [waitlistSubmitted, setWaitlistSubmitted] = useState(false);
+  const [activeRole, setActiveRole] = useState(0);
   const downloadRef = useRef<HTMLDivElement>(null);
 
   const scrollToDownload = () => {
     downloadRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const handleWaitlist = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (waitlistEmail) {
-      try {
-        await fetch("https://formspree.io/f/xlgpnvzo", {
-          method: "POST",
-          body: JSON.stringify({ email: waitlistEmail, type: "iOS Waitlist" }),
-          headers: { Accept: "application/json", "Content-Type": "application/json" },
-        });
-      } catch (_) {}
-      setWaitlistSubmitted(true);
-    }
   };
 
   const trustItems = ["✓ Free to try", "✓ 30-day pilot", "✓ No lock-in", "✓ Dedicated support"];
@@ -86,7 +181,70 @@ export function GetAppPage({ onNavigate }: GetAppPageProps) {
         </div>
       </section>
 
-      {/* SECTION 2 — APP DOWNLOAD */}
+      {/* SECTION 2 — ONBOARDING FLOW */}
+      <section className="section-pad bg-off-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="rev text-center mb-12">
+            <SectionChip label="Onboarding Flow" color="blue" />
+            <h2 className="text-3xl md:text-5xl font-display mt-4">Get Started in 4 Easy Steps</h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {onboardingSteps.map((step, index) => (
+              <div key={step.number} className="rev bg-card rounded-xl border border-border p-6 text-center card-lift" style={{ transitionDelay: `${index * 80}ms` }}>
+                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-blue text-primary-foreground text-2xl font-display shadow-lg shadow-blue/20">
+                  {step.number}
+                </div>
+                <h3 className="font-body font-bold text-foreground mb-2">{step.title}</h3>
+                <p className="text-sm font-body text-mid-grey leading-relaxed">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3 — ROLE-BASED FEATURES */}
+      <section className="section-pad bg-card">
+        <div className="max-w-6xl mx-auto">
+          <div className="rev text-center mb-10">
+            <SectionChip label="Built For Every Role" color="teal" />
+            <h2 className="text-3xl md:text-5xl font-display mt-4">One app. Five perspectives.</h2>
+          </div>
+          <div className="rev flex flex-wrap justify-center gap-3 border-b border-border pb-6 mb-10">
+            {roleFeatures.map((role, index) => (
+              <button
+                key={role.label}
+                onClick={() => setActiveRole(index)}
+                className={`rounded-full border px-5 py-3 text-sm font-body font-semibold transition-all ${
+                  activeRole === index
+                    ? "bg-blue text-primary-foreground border-blue shadow-md shadow-blue/20"
+                    : "bg-card text-mid-grey border-border hover:text-foreground"
+                }`}
+              >
+                <span className="mr-2">{role.icon}</span>{role.label}
+              </button>
+            ))}
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="rev">
+              <h3 className="text-3xl md:text-4xl font-display mb-4">{roleFeatures[activeRole].title}</h3>
+              <p className="text-mid-grey font-body leading-relaxed mb-8 max-w-xl">{roleFeatures[activeRole].desc}</p>
+              <div className="flex flex-wrap gap-3">
+                {roleFeatures[activeRole].chips.map((chip) => (
+                  <span key={chip} className="inline-flex items-center gap-2 rounded-full border border-blue/20 bg-sky px-4 py-2 text-xs font-body font-semibold text-blue">
+                    <Check className="h-3.5 w-3.5" /> {chip}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="rev" style={{ transitionDelay: "120ms" }}>
+              <RolePreview role={roleFeatures[activeRole]} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4 — APP DOWNLOAD */}
       <section ref={downloadRef} className="section-pad bg-card">
         <div className="max-w-6xl mx-auto">
           <div className="rev text-center mb-12">
@@ -105,13 +263,10 @@ export function GetAppPage({ onNavigate }: GetAppPageProps) {
                     <p className="text-sm text-mid-grey font-body">Compatible with Android 8.0 and above</p>
                   </div>
                 </div>
-                <a href="https://drive.usercontent.google.com/download?id=1aX6Q2IoNv4JBpDVl36JfQJdPPI1sK2Nd&export=download&authuser=0" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 w-full bg-blue text-primary-foreground rounded-lg px-6 py-3 text-sm font-body font-semibold hover:brightness-110 transition-all shadow-md shadow-blue/20 mb-2">
-                  <Download className="w-4 h-4" /> Download APK
+                <a href="https://play.google.com/store/apps/details?id=com.classy.mobile&pli=1 " target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 w-full bg-blue text-primary-foreground rounded-lg px-6 py-3 text-sm font-body font-semibold hover:brightness-110 transition-all shadow-md shadow-blue/20 mb-2">
+                  <Download className="w-4 h-4" /> Download on Play Store
                 </a>
-                <p className="text-xs text-mid-grey font-body text-center">Direct APK install · v1.0.0 · 18MB</p>
-                <div className="mt-3 bg-amber/10 border border-amber/20 rounded-lg px-4 py-2 text-xs font-body text-amber">
-                  ⚠️ Enable &lsquo;Install from unknown sources&rsquo; in your phone settings to install
-                </div>
+                <p className="text-xs text-mid-grey font-body text-center">Available on Google Play · Free download</p>
               </div>
 
               {/* iOS */}
@@ -126,15 +281,7 @@ export function GetAppPage({ onNavigate }: GetAppPageProps) {
                 <button disabled className="w-full border-2 border-border text-mid-grey rounded-lg px-6 py-3 text-sm font-body font-semibold opacity-60 cursor-not-allowed mb-2">
                   Coming Soon
                 </button>
-                <p className="text-xs text-teal font-body mb-3">🚀 App for iOS is on the way — join the waitlist to be notified first</p>
-                {waitlistSubmitted ? (
-                  <p className="text-sm font-body font-semibold text-teal">✅ You're on the list!</p>
-                ) : (
-                  <form onSubmit={handleWaitlist} className="flex gap-2">
-                    <input type="email" required placeholder="your@email.com" value={waitlistEmail} onChange={(e) => setWaitlistEmail(e.target.value)} className="flex-1 rounded-lg border border-border px-3 py-2 text-sm font-body bg-card focus:outline-none focus:ring-2 focus:ring-teal/30" />
-                    <button type="submit" className="bg-teal text-accent-foreground rounded-lg px-4 py-2 text-sm font-body font-semibold hover:brightness-110 transition-all">Notify Me</button>
-                  </form>
-                )}
+                <p className="text-xs text-teal font-body">🚀 App for iOS is on the way — sign up via the form to be notified first.</p>
               </div>
 
               {/* Store listing banner */}
@@ -151,9 +298,9 @@ export function GetAppPage({ onNavigate }: GetAppPageProps) {
               </div>
             </div>
 
-            {/* Right — Phone mockup */}
-            <div className="rev flex justify-center" style={{ transitionDelay: "150ms" }}>
-              <PhoneMockup />
+            {/* Right — Community form preview */}
+            <div className="rev" style={{ transitionDelay: "150ms" }}>
+              <CommunityFormPreview onNavigate={onNavigate} />
             </div>
           </div>
         </div>
@@ -209,7 +356,7 @@ export function GetAppPage({ onNavigate }: GetAppPageProps) {
             <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-8 border border-primary-foreground/20">
               <p className="text-4xl mb-3">🏫</p>
               <p className="font-body font-bold text-primary-foreground text-lg mb-4">I represent an educational institute</p>
-              <button onClick={() => onNavigate("signup")} className="w-full bg-primary-foreground text-navy rounded-lg px-6 py-3 text-sm font-body font-semibold hover:brightness-95 transition-all">Apply for the ₹1,000 Pilot →</button>
+              <button onClick={() => onNavigate("pricing")} className="w-full bg-primary-foreground text-navy rounded-lg px-6 py-3 text-sm font-body font-semibold hover:brightness-95 transition-all">View Pricing →</button>
             </div>
             <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-8 border border-primary-foreground/20">
               <p className="text-4xl mb-3">👨‍👩‍👦</p>

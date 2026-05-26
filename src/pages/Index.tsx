@@ -3,13 +3,12 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { HomePage } from "@/pages/HomePage";
-import { StakeholdersPage } from "@/pages/StakeholdersPage";
-import { PilotPage } from "@/pages/PilotPage";
 import { ResourcesPage } from "@/pages/ResourcesPage";
 import { SignupPage } from "@/pages/SignupPage";
 import { GetAppPage } from "@/pages/GetAppPage";
 import { WhoNeedsClassyPage } from "@/pages/WhoNeedsClassyPage";
 import { WhyClassyPage } from "@/pages/WhyClassyPage";
+import { PricingPage } from "@/pages/PricingPage";
 import { isLegalPageType, legalRoutePaths } from "@/lib/legalRoutes";
 import { isMarketingPageType, pageRoutePaths, type MarketingPageType } from "@/lib/pageRoutes";
 
@@ -70,13 +69,12 @@ const Index = ({ initialPage = "home" }: IndexProps) => {
     <div ref={containerRef} className="min-h-screen">
       <Navbar currentPage={currentPage} onNavigate={navigate} />
       {currentPage === "home" && <HomePage onNavigate={navigate} />}
-      {currentPage === "stakeholders" && <StakeholdersPage onNavigate={navigate} />}
-      {currentPage === "pilot" && <PilotPage onNavigate={navigate} />}
       {currentPage === "resources" && <ResourcesPage onNavigate={navigate} />}
       {currentPage === "signup" && <SignupPage onNavigate={navigate} />}
       {currentPage === "getapp" && <GetAppPage onNavigate={navigate} />}
       {currentPage === "who" && <WhoNeedsClassyPage onNavigate={navigate} />}
       {currentPage === "why" && <WhyClassyPage onNavigate={navigate} />}
+      {currentPage === "pricing" && <PricingPage onNavigate={navigate} />}
       <Footer onNavigate={navigate} />
     </div>
   );

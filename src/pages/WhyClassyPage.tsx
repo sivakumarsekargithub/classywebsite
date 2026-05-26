@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { SectionChip } from "@/components/SectionChip";
+import { PilotOutcomes } from "@/components/PilotOutcomes";
 
 interface Props {
   onNavigate: (page: string) => void;
@@ -67,21 +68,87 @@ const emotionCards = [
   { icon: "\u{1F3EB}", who: "For Management", headline: "\u201CThe institution runs itself.\u201D", body: "Attendance is tracked. Substitutions are handled. Parents are informed. You open the admin dashboard and see 94% attendance today, zero complaints this week, and every class covered. That\u2019s what Classy feels like." },
 ];
 
+const challengeTags = ["Cash Bounty", "Verified Cert", "Internship", "Direct Offer"];
+
+const pilotHighlights = [
+  { value: "87%", label: "Teacher efficiency reached in Week 2" },
+  { value: "0", label: "Parent complaints by end of Week 2" },
+  { value: "15 min", label: "Saved per class every day" },
+  { value: "7-8", label: "WhatsApp groups eliminated per parent" },
+];
+
 export function WhyClassyPage({ onNavigate }: Props) {
   return (
     <div>
       {/* Hero */}
       <section className="section-pad pt-32 md:pt-40 bg-gradient-to-b from-teal/10 to-background">
         <div className="max-w-3xl mx-auto text-center rev">
-          <SectionChip label="The Case For Classy" color="blue" />
-          <h1 className="text-4xl md:text-5xl font-display mt-4 mb-4">Save time. Save money. Feel the difference.</h1>
+          <SectionChip label="Why Classy" color="blue" />
+          <h1 className="text-4xl md:text-5xl font-display mt-4 mb-4">
+            Save time. Save money. <em className="text-blue">Feel the difference.</em>
+          </h1>
           <p className="text-mid-grey font-body leading-relaxed max-w-[600px] mx-auto">
             Every institution we've spoken to has the same story: too much time wasted, too many messages missed, too little visibility. Classy was built to solve exactly this — with numbers to prove it.
           </p>
         </div>
       </section>
 
-      {/* Section 1 — Time Saved */}
+      {/* Section 1 — Employability */}
+      <section className="section-pad bg-card">
+        <div className="max-w-6xl mx-auto">
+          <div className="rev text-center mb-12">
+            <SectionChip label="High-Retention Trust" color="amber" />
+            <h2 className="text-4xl md:text-5xl font-display mt-4">Why Classy?</h2>
+          </div>
+        </div>
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          <div className="rev">
+            <h2 className="text-5xl md:text-7xl font-display leading-[0.95] mb-8">
+              <em className="text-blue">Employability:</em><br />
+              Bridge the Gap<br />
+              <span className="text-mid-grey">Before You</span><br />
+              <em className="text-teal">Graduate.</em>
+            </h2>
+            <p className="text-mid-grey font-body leading-relaxed max-w-xl">
+              Students get the exclusive opportunity to solve actual, real-world engineering and business problems dropped directly by rising startups and MNCs. Complete these Classroom Feature Challenges to lock in immediate rewards: real cash bounties, verified digital certificates, priority internships, and direct employment offers before your final semester ends.
+            </p>
+          </div>
+
+          <div className="rev rounded-2xl bg-card border border-border p-8 shadow-xl shadow-navy/5" style={{ transitionDelay: "120ms" }}>
+            <div className="flex items-center justify-between gap-4 mb-8">
+              <span className="rounded-full bg-teal/10 text-teal px-4 py-1.5 text-xs font-body font-semibold">● Live Active Challenge</span>
+              <span className="text-sm font-body text-mid-grey">#CLS-0214</span>
+            </div>
+            <h3 className="text-2xl font-display mb-2">Build Passwordless Login</h3>
+            <p className="font-body text-sm text-mid-grey mb-8">A production-grade authentication flow with magic links and device trust.</p>
+            <div className="divide-y divide-border">
+              {[
+                ["REWARD", "₹15,000 + Certificate"],
+                ["SPONSOR", "Silver Lynx"],
+                ["BONUS", "Priority Internship Offer"],
+              ].map(([label, value]) => (
+                <div key={label} className="flex items-center justify-between gap-4 py-4">
+                  <span className="text-xs font-body tracking-wider text-mid-grey">{label}</span>
+                  <span className="text-sm font-body font-semibold text-foreground">{value}</span>
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-2 mt-6">
+              {challengeTags.map((tag) => (
+                <span key={tag} className="rounded-full border border-border bg-off-white px-3 py-1 text-xs font-body text-foreground">{tag}</span>
+              ))}
+            </div>
+            <button
+              onClick={() => onNavigate("getapp")}
+              className="mt-8 w-full rounded-lg bg-blue px-6 py-3 text-sm font-body font-semibold text-primary-foreground hover:brightness-110 transition-all shadow-md shadow-blue/20"
+            >
+              Accept Challenge &rarr;
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 2 — Time Saved */}
       <section className="section-pad bg-card">
         <div className="max-w-5xl mx-auto">
           <div className="mb-10 rev">
@@ -118,55 +185,30 @@ export function WhyClassyPage({ onNavigate }: Props) {
         </div>
       </section>
 
-      {/* Section 2 — Money Saved */}
-      <section className="section-pad bg-off-white">
+      {/* Section 3 — Pilot Intro */}
+      <section className="section-pad bg-gradient-to-b from-sky to-background">
         <div className="max-w-5xl mx-auto">
-          <div className="mb-10 rev">
-            <SectionChip label="Cost" color="amber" />
-            <h2 className="text-3xl md:text-4xl font-display mt-4">Less than you spend on a single parent-teacher day.</h2>
+          <div className="text-center rev">
+            <SectionChip label="Pilot Complete" color="teal" />
+            <h2 className="text-4xl md:text-5xl font-display mt-6 mb-5">
+              We ran the pilot. <em className="text-blue">Here's what happened.</em>
+            </h2>
+            <p className="text-mid-grey font-body max-w-3xl mx-auto leading-relaxed">
+              Classy was piloted at a real educational institute over 2 weeks. Every metric was tracked: teacher efficiency, student completion, parent complaints, and management visibility. The results speak for themselves.
+            </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                title: "The Pilot",
-                price: "₹1,000",
-                unit: "one-time pilot fee",
-                compare: "Cost of printing 500 report cards + postage = ₹2,000–3,000",
-                body: "The pilot costs less than one round of printed report cards. And replaces the need for them permanently.",
-              },
-              {
-                title: "Full Plan",
-                price: "₹500",
-                unit: "/ student / year",
-                subUnit: "= ₹1.37 / day / student",
-                compare: "Average WhatsApp Business API cost for bulk messaging = ₹3–5 per message",
-                body: "Institutions send hundreds of messages a week. Classy replaces all of them for ₹1.37/day per student.",
-              },
-              {
-                title: "What Parents Said",
-                price: "112 / 112",
-                unit: "parents agreed to pay",
-                body: "When asked if they'd pay for an app that showed attendance, timetable, and assignments — every single parent said yes. We built all that and more.",
-              },
-            ].map((c, i) => (
-              <div key={i} className="rev bg-card rounded-2xl p-6 border border-border card-lift" style={{ transitionDelay: `${i * 80}ms` }}>
-                <h4 className="font-body font-semibold text-sm text-mid-grey mb-4">{c.title}</h4>
-                <div className="text-3xl font-display italic text-blue">{c.price}</div>
-                <div className="text-xs font-body text-mid-grey mt-1">{c.unit}</div>
-                {"subUnit" in c && <div className="text-xs font-body text-teal mt-0.5">{c.subUnit}</div>}
-                {"compare" in c && c.compare && (
-                  <div className="bg-sky/60 rounded-lg px-3 py-2 mt-4 text-xs font-body text-mid-grey">
-                    Compare to: {c.compare}
-                  </div>
-                )}
-                <p className="text-sm font-body text-mid-grey mt-4 leading-relaxed">{c.body}</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+            {pilotHighlights.map((item, i) => (
+              <div key={item.label} className="rev rounded-xl border border-border bg-card p-6 text-center card-lift" style={{ transitionDelay: `${i * 80}ms` }}>
+                <div className="text-3xl font-display italic text-blue">{item.value}</div>
+                <p className="text-sm font-body text-mid-grey mt-2">{item.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Section 3 — Efficiency Metrics */}
+      {/* Section 4 — Efficiency Metrics */}
       <section className="section-pad bg-card">
         <div className="max-w-5xl mx-auto">
           <div className="mb-10 rev text-center">
@@ -183,7 +225,9 @@ export function WhyClassyPage({ onNavigate }: Props) {
         </div>
       </section>
 
-      {/* Section 4 — How It Feels */}
+      <PilotOutcomes />
+
+      {/* Section 5 — How It Feels */}
       <section className="section-pad bg-navy text-navy-foreground">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 rev">
@@ -203,7 +247,7 @@ export function WhyClassyPage({ onNavigate }: Props) {
         </div>
       </section>
 
-      {/* Section 5 — The One Question */}
+      {/* Section 6 — The One Question */}
       <section className="section-pad bg-gradient-to-r from-blue to-teal text-primary-foreground text-center relative overflow-hidden">
         <div className="max-w-3xl mx-auto rev">
           <h2 className="text-3xl md:text-4xl font-display mb-4">
@@ -217,7 +261,7 @@ export function WhyClassyPage({ onNavigate }: Props) {
               onClick={() => onNavigate("signup")}
               className="bg-card text-navy rounded-lg px-6 py-3 text-sm font-body font-semibold hover:brightness-110 transition-all shadow-md"
             >
-              Start the ₹1,000 Pilot &rarr;
+              Start the Pilot &rarr;
             </button>
             <button
               onClick={() => onNavigate("getapp")}
