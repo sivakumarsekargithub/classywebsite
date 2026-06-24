@@ -155,8 +155,28 @@ export function WhyClassyPage({ onNavigate }: Props) {
             <SectionChip label="Time" color="teal" />
             <h2 className="text-3xl md:text-4xl font-display mt-4">Hours given back to teaching. Every single day.</h2>
           </div>
-          <div className="overflow-x-auto rev">
-            <table className="w-full text-sm font-body border-collapse">
+          <div className="rev space-y-3 md:hidden">
+            {timeRows.map((r) => (
+              <article key={r.role} className="rounded-xl border border-border bg-off-white p-4">
+                <div className="mb-3 flex items-start justify-between gap-3">
+                  <h3 className="font-body text-base font-bold leading-tight text-foreground">{r.role}</h3>
+                  <span className="shrink-0 rounded-full bg-blue/10 px-3 py-1 text-xs font-body font-bold text-blue">{r.saved}</span>
+                </div>
+                <dl className="space-y-3 text-sm font-body">
+                  <div>
+                    <dt className="mb-1 font-semibold text-mid-grey">Before Classy</dt>
+                    <dd className="leading-relaxed text-mid-grey"><span className="mr-1.5 text-destructive/60">✗</span>{r.before}</dd>
+                  </div>
+                  <div>
+                    <dt className="mb-1 font-semibold text-teal">With Classy</dt>
+                    <dd className="leading-relaxed text-foreground"><span className="mr-1.5 text-teal">✓</span>{r.after}</dd>
+                  </div>
+                </dl>
+              </article>
+            ))}
+          </div>
+          <div className="rev hidden overflow-x-auto md:block">
+            <table className="w-full min-w-[720px] text-sm font-body border-collapse">
               <thead>
                 <tr className="border-b-2 border-border">
                   <th className="text-left py-3 px-4 font-semibold text-foreground">Role</th>

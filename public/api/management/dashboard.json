@@ -1,0 +1,75 @@
+{
+  "adminName": "Public - ID",
+  "attendance": [
+    {
+      "id": "teacher-attendance",
+      "title": "Today's Teacher Attendance",
+      "percent": 92,
+      "label": "Present",
+      "total": "68 Total",
+      "present": "63 Present",
+      "absent": "3 Absent",
+      "leave": "2 On Leave",
+      "color": "#22c55e",
+      "totalIcon": "teachers"
+    },
+    {
+      "id": "student-attendance",
+      "title": "Today's Student Attendance",
+      "percent": 88,
+      "label": "Present",
+      "total": "1,247 Total",
+      "present": "1,097 Present",
+      "absent": "112 Absent",
+      "leave": "38 On Leave",
+      "color": "#07885f",
+      "totalIcon": "students"
+    }
+  ],
+  "schedule": [
+    {
+      "id": "staff-meeting",
+      "time": "09:00 AM",
+      "title": "Staff Meeting",
+      "description": "Monthly review with department heads"
+    },
+    {
+      "id": "pt-conference",
+      "time": "11:00 AM",
+      "title": "Parent-Teacher Conference",
+      "description": "Grade 10 parents meeting"
+    },
+    {
+      "id": "board-review",
+      "time": "01:00 PM",
+      "title": "Board Review",
+      "description": "Annual budget presentation"
+    },
+    {
+      "id": "sports-committee",
+      "time": "03:00 PM",
+      "title": "Sports Committee",
+      "description": "Annual day planning"
+    }
+  ],
+  "approvals": [
+    {
+      "id": "leave-priya",
+      "name": "Ms. Priya Sharma",
+      "meta": "Teacher - Sick Leave - 2 days",
+      "date": "Feb 19-20"
+    },
+    {
+      "id": "leave-ravi",
+      "name": "Mr. Ravi Kumar",
+      "meta": "Staff - Permission - Half day",
+      "date": "Feb 19"
+    },
+    {
+      "id": "leave-anita",
+      "name": "Mrs. Anita Desai",
+      "meta": "Teacher - Casual Leave - 1 day",
+      "date": "Feb 21"
+    }
+  ]
+}

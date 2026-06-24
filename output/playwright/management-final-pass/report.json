@@ -1,0 +1,149 @@
+{
+  "calendarAction": true,
+  "chatSend": {
+    "visible": true,
+    "inputCleared": true,
+    "lastMessageInViewport": true,
+    "messageSentBannerVisible": false,
+    "notificationCount": 1
+  },
+  "desktopLayouts": [
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 292,
+        "width": 292
+      },
+      "title": "Management Command Center",
+      "url": "/management"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 292,
+        "width": 292
+      },
+      "title": "Management Command Center",
+      "url": "/management/institute"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 292,
+        "width": 292
+      },
+      "title": "Management Command Center",
+      "url": "/management/communication"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 292,
+        "width": 292
+      },
+      "title": "Management Command Center",
+      "url": "/management/calendar"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 292,
+        "width": 292
+      },
+      "title": "Management Command Center",
+      "url": "/management/profile"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 292,
+        "width": 292
+      },
+      "title": "Management Command Center",
+      "url": "/management/codes"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 292,
+        "width": 292
+      },
+      "title": "Management Command Center",
+      "url": "/management-users/chat"
+    }
+  ],
+  "errors": [],
+  "instituteAction": true,
+  "logoutRedirected": true,
+  "mobileLayouts": [
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 0,
+        "width": 0
+      },
+      "title": "Management Command Center",
+      "url": "/management"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 0,
+        "width": 0
+      },
+      "title": "Management Command Center",
+      "url": "/management/institute"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 0,
+        "width": 0
+      },
+      "title": "Management Command Center",
+      "url": "/management/communication"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 0,
+        "width": 0
+      },
+      "title": "Management Command Center",
+      "url": "/management/calendar"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 0,
+        "width": 0
+      },
+      "title": "Management Command Center",
+      "url": "/management/profile"
+    }
+  ]
+}

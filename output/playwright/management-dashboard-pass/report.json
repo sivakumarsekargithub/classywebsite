@@ -1,0 +1,76 @@
+{
+  "approvalAccepted": true,
+  "dashboardVisible": {
+    "studentAttendance": true,
+    "teacherAttendance": true,
+    "schedule": true,
+    "instituteControl": true,
+    "approvals": true
+  },
+  "desktopLayout": {
+    "clipped": [],
+    "hasHorizontalOverflow": false,
+    "title": "Management Command Center",
+    "path": "/management"
+  },
+  "errors": [],
+  "manageInstituteRoute": true,
+  "mobileLayouts": [
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "title": "Management Command Center",
+      "path": "/management"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "title": "Institute Operational Directory",
+      "path": "/management/institute"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "title": "Broadcast & Direct Hub",
+      "path": "/management/communication"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "title": "Institutional Master Calendar",
+      "path": "/management/schedule"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "title": "Institution Profile",
+      "path": "/management/profile"
+    }
+  ],
+  "routeLayouts": [
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "title": "Institute Operational Directory",
+      "path": "/management/institute"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "title": "Broadcast & Direct Hub",
+      "path": "/management/communication"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "title": "Institutional Master Calendar",
+      "path": "/management/schedule"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "title": "Institution Profile",
+      "path": "/management/profile"
+    }
+  ]
+}

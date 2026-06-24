@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { SafeHtml } from "@/components/SafeHtml";
 
 interface LegalPageProps {
   type: "privacy" | "terms" | "acceptable-use";
@@ -24,7 +25,7 @@ export function LegalPage({ type, onNavigate }: LegalPageProps) {
         <h1 className="text-3xl md:text-5xl font-display mb-2">{content.title}</h1>
         <p className="text-sm font-body text-mid-grey mb-8">Effective Date: March 16, 2026</p>
         <div className="prose prose-slate max-w-none font-body text-foreground leading-relaxed legal-content">
-          <div dangerouslySetInnerHTML={{ __html: content.html }} />
+          <SafeHtml html={content.html} />
         </div>
       </div>
     </div>

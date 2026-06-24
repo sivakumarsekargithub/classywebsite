@@ -18,7 +18,7 @@ function EfficiencyChart() {
           return (
             <g key={v}>
               <line x1="40" y1={y} x2="370" y2={y} stroke="hsl(214 32% 91%)" strokeWidth="1" />
-              <text x="32" y={y + 4} textAnchor="end" className="fill-mid-grey" fontSize="10" fontFamily="Plus Jakarta Sans">{v}%</text>
+              <text x="32" y={y + 4} textAnchor="end" className="fill-mid-grey" fontSize="9" fontFamily="Plus Jakarta Sans">{v}%</text>
             </g>
           );
         })}
@@ -59,7 +59,7 @@ function AssignmentChart() {
           return (
             <g key={v}>
               <line x1="50" y1={y} x2="260" y2={y} stroke="hsl(214 32% 91%)" strokeWidth="1" />
-              <text x="42" y={y + 4} textAnchor="end" fontSize="10" className="fill-mid-grey" fontFamily="Plus Jakarta Sans">{v}%</text>
+              <text x="42" y={y + 4} textAnchor="end" fontSize="9" className="fill-mid-grey" fontFamily="Plus Jakarta Sans">{v}%</text>
             </g>
           );
         })}
@@ -222,7 +222,7 @@ export function PilotOutcomes() {
 
       {/* Big Impact Strip */}
       <section className="section-pad bg-navy text-navy-foreground py-12">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
           {[
             { num: "15% → 87%", label: "Efficiency jump" },
             { num: "43% → 87%", label: "Assignments done" },
@@ -232,7 +232,7 @@ export function PilotOutcomes() {
           ].map((s) => (
             <div key={s.label} className="rev">
               <div className="text-2xl md:text-3xl font-display italic text-blue-light">{s.num}</div>
-              <div className="text-xs font-body text-navy-foreground/60 mt-2 uppercase tracking-wider">{s.label}</div>
+              <div className="text-xs font-body text-navy-foreground/60 mt-2 uppercase tracking-wide [overflow-wrap:anywhere]">{s.label}</div>
             </div>
           ))}
         </div>

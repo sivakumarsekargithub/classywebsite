@@ -1,0 +1,69 @@
+{
+  "groups": [
+    {
+      "id": "all-teachers",
+      "title": "All Teachers",
+      "message": "Staff meeting at 9 AM tomorrow",
+      "members": "68 members",
+      "time": "5m ago",
+      "unread": 2
+    },
+    {
+      "id": "admin-staff",
+      "title": "Admin Staff",
+      "message": "Budget report uploaded",
+      "members": "12 members",
+      "time": "1h ago"
+    },
+    {
+      "id": "grade-10-teachers",
+      "title": "Grade 10 Teachers",
+      "message": "Exam schedule finalized",
+      "members": "8 members",
+      "time": "3h ago",
+      "unread": 5
+    }
+  ],
+  "directMessages": [
+    {
+      "id": "johnson",
+      "name": "Mr. Johnson",
+      "message": "Leave request approved",
+      "role": "Math Teacher",
+      "time": "10m ago"
+    },
+    {
+      "id": "williams",
+      "name": "Ms. Williams",
+      "message": "Report card ready",
+      "role": "English Teacher",
+      "time": "30m ago",
+      "unread": 1
+    },
+    {
+      "id": "lee",
+      "name": "Mr. Lee",
+      "message": "Lab equipment request",
+      "role": "CS Teacher",
+      "time": "2h ago"
+    }
+  ],
+  "audiences": [
+    {
+      "value": "all",
+      "label": "All"
+    },
+    {
+      "value": "teachers",
+      "label": "Teachers"
+    },
+    {
+      "value": "parents",
+      "label": "Parents"
+    },
+    {
+      "value": "students",
+      "label": "Students"
+    }
+  ]
+}

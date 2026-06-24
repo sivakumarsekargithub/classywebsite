@@ -1,0 +1,162 @@
+{
+  "chatSend": {
+    "visible": true,
+    "lastMessageInViewport": true,
+    "messageSentBannerVisible": false
+  },
+  "classFilterApplied": true,
+  "createdBlockVisible": true,
+  "desktopLayouts": [
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 292,
+        "width": 292
+      },
+      "title": "Management Command Center",
+      "url": "/management"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 292,
+        "width": 292
+      },
+      "title": "Institute Operational Directory",
+      "url": "/management/institute"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 292,
+        "width": 292
+      },
+      "title": "Broadcast & Direct Hub",
+      "url": "/management/communication"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 292,
+        "width": 292
+      },
+      "title": "Institutional Master Calendar",
+      "url": "/management/schedule"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 292,
+        "width": 292
+      },
+      "title": "Institutional Master Calendar",
+      "url": "/management/calendar"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 292,
+        "width": 292
+      },
+      "title": "Institution Profile",
+      "url": "/management/profile"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 292,
+        "width": 292
+      },
+      "title": "Institute Operational Directory",
+      "url": "/management/codes"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 292,
+        "width": 292
+      },
+      "title": "Broadcast & Direct Hub",
+      "url": "/management-users/chat"
+    }
+  ],
+  "errors": [],
+  "profileCopyVisible": true,
+  "profileVisible": true,
+  "studentsVisible": true,
+  "teacherDetailVisible": true,
+  "teachersVisible": true,
+  "mobileLayouts": [
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 0,
+        "width": 0
+      },
+      "title": "Management Command Center",
+      "url": "/management"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 0,
+        "width": 0
+      },
+      "title": "Institute Operational Directory",
+      "url": "/management/institute"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 0,
+        "width": 0
+      },
+      "title": "Broadcast & Direct Hub",
+      "url": "/management/communication"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 0,
+        "width": 0
+      },
+      "title": "Institutional Master Calendar",
+      "url": "/management/schedule"
+    },
+    {
+      "clipped": [],
+      "hasHorizontalOverflow": false,
+      "sidebar": {
+        "left": 0,
+        "right": 0,
+        "width": 0
+      },
+      "title": "Institution Profile",
+      "url": "/management/profile"
+    }
+  ]
+}

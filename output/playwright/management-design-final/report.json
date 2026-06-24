@@ -1,0 +1,347 @@
+[
+  {
+    "viewport": "desktop",
+    "route": "home",
+    "url": "http://localhost:3000/management",
+    "activeNav": [
+      "Home"
+    ],
+    "overflowAmount": 0,
+    "overflowX": false,
+    "clippedControlCount": 0,
+    "consoleWidth": 1469,
+    "tableRows": 0,
+    "studentSearchPlaceholder": null,
+    "sidebar": {
+      "left": 0,
+      "right": 210,
+      "top": 0,
+      "bottom": 746,
+      "height": 746,
+      "viewportHeight": 746
+    },
+    "consoleErrors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "institute",
+    "url": "http://localhost:3000/management/codes",
+    "activeNav": [
+      "Institute"
+    ],
+    "overflowAmount": 0,
+    "overflowX": false,
+    "clippedControlCount": 0,
+    "consoleWidth": 1469,
+    "tableRows": 112,
+    "studentSearchPlaceholder": "Search students by name or roll number...",
+    "sidebar": {
+      "left": 0,
+      "right": 210,
+      "top": 0,
+      "bottom": 746,
+      "height": 746,
+      "viewportHeight": 746
+    },
+    "consoleErrors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "chat",
+    "url": "http://localhost:3000/management/communication",
+    "activeNav": [
+      "Chat"
+    ],
+    "overflowAmount": 0,
+    "overflowX": false,
+    "clippedControlCount": 0,
+    "consoleWidth": 1469,
+    "tableRows": 0,
+    "studentSearchPlaceholder": null,
+    "sidebar": {
+      "left": 0,
+      "right": 210,
+      "top": 0,
+      "bottom": 746,
+      "height": 746,
+      "viewportHeight": 746
+    },
+    "consoleErrors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "schedule",
+    "url": "http://localhost:3000/management/calendar",
+    "activeNav": [
+      "Schedule"
+    ],
+    "overflowAmount": 0,
+    "overflowX": false,
+    "clippedControlCount": 0,
+    "consoleWidth": 1469,
+    "tableRows": 0,
+    "studentSearchPlaceholder": null,
+    "sidebar": {
+      "left": 0,
+      "right": 210,
+      "top": 0,
+      "bottom": 746,
+      "height": 746,
+      "viewportHeight": 746
+    },
+    "consoleErrors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "profile",
+    "url": "http://localhost:3000/management/profile",
+    "activeNav": [
+      "Profile"
+    ],
+    "overflowAmount": 0,
+    "overflowX": false,
+    "clippedControlCount": 0,
+    "consoleWidth": 1469,
+    "tableRows": 0,
+    "studentSearchPlaceholder": null,
+    "sidebar": {
+      "left": 0,
+      "right": 210,
+      "top": 0,
+      "bottom": 746,
+      "height": 746,
+      "viewportHeight": 746
+    },
+    "consoleErrors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "home",
+    "url": "http://localhost:3000/management",
+    "activeNav": [
+      "Home"
+    ],
+    "overflowAmount": 0,
+    "overflowX": false,
+    "clippedControlCount": 0,
+    "consoleWidth": 768,
+    "tableRows": 0,
+    "studentSearchPlaceholder": null,
+    "sidebar": {
+      "left": 0,
+      "right": 768,
+      "top": 0,
+      "bottom": 144,
+      "height": 144,
+      "viewportHeight": 1024
+    },
+    "consoleErrors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "institute",
+    "url": "http://localhost:3000/management/codes",
+    "activeNav": [
+      "Institute"
+    ],
+    "overflowAmount": 0,
+    "overflowX": false,
+    "clippedControlCount": 0,
+    "consoleWidth": 768,
+    "tableRows": 112,
+    "studentSearchPlaceholder": "Search students by name or roll number...",
+    "sidebar": {
+      "left": 0,
+      "right": 768,
+      "top": 0,
+      "bottom": 144,
+      "height": 144,
+      "viewportHeight": 1024
+    },
+    "consoleErrors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "chat",
+    "url": "http://localhost:3000/management/communication",
+    "activeNav": [
+      "Chat"
+    ],
+    "overflowAmount": 0,
+    "overflowX": false,
+    "clippedControlCount": 0,
+    "consoleWidth": 768,
+    "tableRows": 0,
+    "studentSearchPlaceholder": null,
+    "sidebar": {
+      "left": 0,
+      "right": 768,
+      "top": 0,
+      "bottom": 144,
+      "height": 144,
+      "viewportHeight": 1024
+    },
+    "consoleErrors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "schedule",
+    "url": "http://localhost:3000/management/calendar",
+    "activeNav": [
+      "Schedule"
+    ],
+    "overflowAmount": 0,
+    "overflowX": false,
+    "clippedControlCount": 0,
+    "consoleWidth": 768,
+    "tableRows": 0,
+    "studentSearchPlaceholder": null,
+    "sidebar": {
+      "left": 0,
+      "right": 768,
+      "top": 0,
+      "bottom": 144,
+      "height": 144,
+      "viewportHeight": 1024
+    },
+    "consoleErrors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "profile",
+    "url": "http://localhost:3000/management/profile",
+    "activeNav": [
+      "Profile"
+    ],
+    "overflowAmount": 0,
+    "overflowX": false,
+    "clippedControlCount": 0,
+    "consoleWidth": 768,
+    "tableRows": 0,
+    "studentSearchPlaceholder": null,
+    "sidebar": {
+      "left": 0,
+      "right": 768,
+      "top": 0,
+      "bottom": 144,
+      "height": 144,
+      "viewportHeight": 1024
+    },
+    "consoleErrors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "home",
+    "url": "http://localhost:3000/management",
+    "activeNav": [
+      "Home"
+    ],
+    "overflowAmount": 0,
+    "overflowX": false,
+    "clippedControlCount": 0,
+    "consoleWidth": 390,
+    "tableRows": 0,
+    "studentSearchPlaceholder": null,
+    "sidebar": {
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": 0,
+      "height": 0,
+      "viewportHeight": 844
+    },
+    "consoleErrors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "institute",
+    "url": "http://localhost:3000/management/codes",
+    "activeNav": [
+      "Institute"
+    ],
+    "overflowAmount": 0,
+    "overflowX": false,
+    "clippedControlCount": 0,
+    "consoleWidth": 390,
+    "tableRows": 112,
+    "studentSearchPlaceholder": "Search students...",
+    "sidebar": {
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": 0,
+      "height": 0,
+      "viewportHeight": 844
+    },
+    "consoleErrors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "chat",
+    "url": "http://localhost:3000/management/communication",
+    "activeNav": [
+      "Chat"
+    ],
+    "overflowAmount": 0,
+    "overflowX": false,
+    "clippedControlCount": 0,
+    "consoleWidth": 390,
+    "tableRows": 0,
+    "studentSearchPlaceholder": null,
+    "sidebar": {
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": 0,
+      "height": 0,
+      "viewportHeight": 844
+    },
+    "consoleErrors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "schedule",
+    "url": "http://localhost:3000/management/calendar",
+    "activeNav": [
+      "Schedule"
+    ],
+    "overflowAmount": 0,
+    "overflowX": false,
+    "clippedControlCount": 0,
+    "consoleWidth": 390,
+    "tableRows": 0,
+    "studentSearchPlaceholder": null,
+    "sidebar": {
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": 0,
+      "height": 0,
+      "viewportHeight": 844
+    },
+    "consoleErrors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "profile",
+    "url": "http://localhost:3000/management/profile",
+    "activeNav": [
+      "Profile"
+    ],
+    "overflowAmount": 0,
+    "overflowX": false,
+    "clippedControlCount": 0,
+    "consoleWidth": 390,
+    "tableRows": 0,
+    "studentSearchPlaceholder": null,
+    "sidebar": {
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": 0,
+      "height": 0,
+      "viewportHeight": 844
+    },
+    "consoleErrors": []
+  }
+]

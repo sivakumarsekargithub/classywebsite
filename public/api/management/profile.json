@@ -1,0 +1,82 @@
+{
+  "name": "Springfield International School",
+  "code": "SIS2024",
+  "description": "Established 1998 - CBSE Affiliated - Co-Educational",
+  "details": [
+    {
+      "id": "admin",
+      "label": "Admin Name",
+      "value": "Public - ID",
+      "icon": "admin"
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "value": "+91 98765 43210",
+      "icon": "phone"
+    },
+    {
+      "id": "email",
+      "label": "Email",
+      "value": "admin@classy.school",
+      "icon": "email"
+    },
+    {
+      "id": "address",
+      "label": "Address",
+      "value": "123 Education Lane, Springfield, IL 62704",
+      "icon": "address"
+    }
+  ],
+  "timings": "08:00 AM - 03:00 PM",
+  "features": [
+    {
+      "id": "curriculum",
+      "title": "CBSE Curriculum",
+      "detail": "Grades 1-12",
+      "icon": "curriculum"
+    },
+    {
+      "id": "science",
+      "title": "Science Labs",
+      "detail": "6 Advanced Labs",
+      "icon": "science"
+    },
+    {
+      "id": "smart-classes",
+      "title": "Smart Classes",
+      "detail": "42 Rooms",
+      "icon": "smart-classes"
+    },
+    {
+      "id": "music",
+      "title": "Music Academy",
+      "detail": "Vocal & Instrumental",
+      "icon": "music"
+    },
+    {
+      "id": "art",
+      "title": "Art Studio",
+      "detail": "Fine Arts Program",
+      "icon": "art"
+    },
+    {
+      "id": "sports",
+      "title": "Sports Complex",
+      "detail": "Multi-sport Facility",
+      "icon": "sports"
+    },
+    {
+      "id": "ranking",
+      "title": "Top 50 Schools",
+      "detail": "State Ranking 2024",
+      "icon": "ranking"
+    },
+    {
+      "id": "certified",
+      "title": "ISO Certified",
+      "detail": "9001:2015",
+      "icon": "certified"
+    }
+  ]
+}

@@ -26,6 +26,12 @@ const Index = ({ initialPage = "home" }: IndexProps) => {
   }, [initialPage, location.search]);
 
   const navigate = useCallback((page: string) => {
+    if (page === "management") {
+      routerNavigate("/management");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
     if (isLegalPageType(page)) {
       routerNavigate(legalRoutePaths[page]);
       return;

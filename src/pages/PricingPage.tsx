@@ -209,8 +209,25 @@ export function PricingPage({ onNavigate }: PricingPageProps) {
       <section className="section-pad bg-card">
         <div className="max-w-5xl mx-auto">
           <h2 className="rev text-3xl md:text-4xl font-display text-center mb-10">Compare plans</h2>
-          <div className="rev overflow-hidden rounded-xl border border-border bg-card">
-            <table className="w-full text-sm font-body">
+          <div className="rev grid gap-3 md:hidden">
+            {comparisonRows.map(([feature, free, pro]) => (
+              <article key={feature} className="rounded-xl border border-border bg-off-white p-4">
+                <h3 className="font-body text-base font-bold text-foreground">{feature}</h3>
+                <dl className="mt-4 grid grid-cols-2 gap-3 text-sm font-body">
+                  <div className="rounded-lg bg-card p-3">
+                    <dt className="mb-1 font-semibold text-mid-grey">Free</dt>
+                    <dd className={free === "✓" ? "font-bold text-teal" : "font-medium text-mid-grey"}>{free}</dd>
+                  </div>
+                  <div className="rounded-lg bg-card p-3">
+                    <dt className="mb-1 font-semibold text-blue">Pro</dt>
+                    <dd className={pro === "✓" ? "font-bold text-teal" : "font-medium text-foreground"}>{pro}</dd>
+                  </div>
+                </dl>
+              </article>
+            ))}
+          </div>
+          <div className="rev hidden overflow-x-auto rounded-xl border border-border bg-card md:block">
+            <table className="w-full min-w-[560px] text-sm font-body">
               <thead className="bg-off-white">
                 <tr>
                   <th className="text-left p-5 font-bold text-foreground">Feature</th>

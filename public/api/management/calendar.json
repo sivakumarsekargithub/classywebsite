@@ -1,0 +1,120 @@
+{
+  "monthLabel": "February 2026",
+  "selectedDay": 19,
+  "days": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28
+  ],
+  "events": [
+    {
+      "id": "staff-meeting",
+      "title": "Staff Meeting",
+      "time": "09:00 AM",
+      "date": "2026-02-19",
+      "category": "Meeting",
+      "iconClass": "bg-[#07885f]/10 text-[#07885f]"
+    },
+    {
+      "id": "board-review",
+      "title": "Board Review",
+      "time": "11:00 AM",
+      "date": "2026-02-20",
+      "category": "Review",
+      "iconClass": "bg-amber/10 text-amber"
+    },
+    {
+      "id": "parent-teacher-day",
+      "title": "Parent-Teacher Day",
+      "time": "All Day",
+      "date": "2026-02-21",
+      "category": "Event",
+      "iconClass": "bg-green-500/10 text-green-600"
+    },
+    {
+      "id": "annual-day-planning",
+      "title": "Annual Day Planning",
+      "time": "03:00 PM",
+      "date": "2026-02-22",
+      "category": "Planning",
+      "iconClass": "bg-cyan-500/10 text-cyan-600"
+    }
+  ],
+  "teacherSchedule": [
+    {
+      "id": "johnson",
+      "teacher": "Mr. Johnson",
+      "subject": "Mathematics",
+      "classes": [
+        "10-A",
+        "9-A"
+      ],
+      "time": "08:00 - 14:00"
+    },
+    {
+      "id": "williams",
+      "teacher": "Ms. Williams",
+      "subject": "English",
+      "classes": [
+        "10-B",
+        "8-A"
+      ],
+      "time": "08:30 - 13:00"
+    },
+    {
+      "id": "smith",
+      "teacher": "Dr. Smith",
+      "subject": "Physics",
+      "classes": [
+        "9-A",
+        "10-A"
+      ],
+      "time": "09:00 - 15:00"
+    },
+    {
+      "id": "davis",
+      "teacher": "Mrs. Davis",
+      "subject": "History",
+      "classes": [
+        "9-B",
+        "10-B"
+      ],
+      "time": "08:00 - 14:00"
+    },
+    {
+      "id": "lee",
+      "teacher": "Mr. Lee",
+      "subject": "Computer Science",
+      "classes": [
+        "10-A",
+        "8-A"
+      ],
+      "time": "10:00 - 15:00"
+    }
+  ]
+}

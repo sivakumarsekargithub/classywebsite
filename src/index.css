@@ -34,7 +34,7 @@
     --input: 214 32% 91%;
     --ring: 217 91% 50%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
     /* Custom Classy tokens */
     --navy: 213 90% 6%;
@@ -64,12 +64,26 @@
   * {
     @apply border-border;
   }
+  html {
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
   body {
     @apply bg-background text-foreground;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    min-width: 320px;
+    overflow-x: hidden;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Instrument Serif', serif;
+    letter-spacing: 0;
+  }
+  button, input, select, textarea {
+    font: inherit;
+  }
+  button, a {
+    -webkit-tap-highlight-color: transparent;
   }
 }
 
@@ -113,6 +127,7 @@
 /* Card hover lift */
 .card-lift {
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  height: 100%;
 }
 .card-lift:hover {
   transform: translateY(-5px);
@@ -135,14 +150,44 @@
   backdrop-filter: blur(8px);
 }
 
-/* Section spacing */
-.section-pad {
-  padding: 6rem 5vw;
+@layer components {
+  .section-pad {
+    padding: clamp(3.5rem, 8vw, 6rem) max(1rem, 5vw);
+  }
+
+  @media (max-width: 920px) {
+    .section-pad {
+      padding: 3.25rem max(1rem, 5vw);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .section-pad {
+      padding: 3rem 1rem;
+    }
+  }
 }
 
-@media (max-width: 920px) {
+@media (max-width: 640px) {
   .section-pad {
-    padding: 3rem 5vw;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+  .rev {
+    opacity: 1;
+    transform: none;
+  }
+  .card-lift:hover {
+    transform: none;
   }
 }
 

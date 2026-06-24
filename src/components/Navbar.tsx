@@ -11,6 +11,7 @@ const navLinks = [
   { id: "who", label: "Who Needs Classy" },
   { id: "why", label: "Why Classy" },
   { id: "pricing", label: "Pricing" },
+  { id: "management", label: "Management" },
   { id: "getapp", label: "Get the App" },
 ];
 
@@ -32,17 +33,18 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 navbar-glass ${scrolled ? "scrolled" : ""}`}>
       <div className="max-w-7xl mx-auto px-[5vw] h-16 flex items-center justify-between">
-        <button onClick={() => navigate("home")} className="flex items-center">
+        <button type="button" onClick={() => navigate("home")} className="flex items-center rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue/40" aria-label="Go to Classy home">
           <img src={classyLogo} alt="Classy" className="h-10 w-auto" />
         </button>
 
         {/* Desktop */}
-        <div className="hidden min-[920px]:flex items-center gap-8">
+        <div className="hidden min-[980px]:flex items-center gap-6">
           {navLinks.map((l) => (
             <button
+              type="button"
               key={l.id}
               onClick={() => navigate(l.id)}
-              className={`text-sm font-body font-medium transition-colors ${
+              className={`rounded-lg px-1 py-2 text-sm font-body font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue/40 ${
                 currentPage === l.id ? "text-blue" : "text-mid-grey hover:text-foreground"
               }`}
             >
@@ -53,8 +55,12 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
 
         {/* Mobile toggle */}
         <button
-          className="min-[920px]:hidden text-foreground"
+          type="button"
+          className="min-[980px]:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue/40"
           onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -62,12 +68,13 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="min-[920px]:hidden bg-card border-t border-border px-[5vw] py-4 flex flex-col gap-3">
+        <div id="mobile-navigation" className="min-[980px]:hidden bg-card border-t border-border px-[5vw] py-4 flex flex-col gap-2 shadow-lg">
           {navLinks.map((l) => (
             <button
+              type="button"
               key={l.id}
               onClick={() => navigate(l.id)}
-              className={`text-sm font-body font-medium text-left py-2 ${
+              className={`rounded-lg px-2 py-2 text-sm font-body font-medium text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue/40 ${
                 currentPage === l.id ? "text-blue" : "text-mid-grey"
               }`}
             >

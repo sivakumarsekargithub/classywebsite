@@ -1,0 +1,246 @@
+{
+  "capturedAt": "2026-06-22T12:48:37.903Z",
+  "metrics": [
+    {
+      "name": "home",
+      "viewportName": "desktop",
+      "url": "/management",
+      "overflowX": 0,
+      "activeNav": [
+        "Home"
+      ],
+      "sidebarBottom": 746,
+      "sidebarHeight": 746,
+      "footerBottom": 746,
+      "hasNextIndicator": false,
+      "timestampHasUpperMeridiem": true,
+      "clipped": []
+    },
+    {
+      "name": "institute",
+      "viewportName": "desktop",
+      "url": "/management/codes",
+      "overflowX": 0,
+      "activeNav": [
+        "Institute"
+      ],
+      "sidebarBottom": 746,
+      "sidebarHeight": 746,
+      "footerBottom": 746,
+      "hasNextIndicator": false,
+      "timestampHasUpperMeridiem": false,
+      "clipped": []
+    },
+    {
+      "name": "chat",
+      "viewportName": "desktop",
+      "url": "/management/communication",
+      "overflowX": 0,
+      "activeNav": [
+        "Chat"
+      ],
+      "sidebarBottom": 746,
+      "sidebarHeight": 746,
+      "footerBottom": 746,
+      "hasNextIndicator": false,
+      "timestampHasUpperMeridiem": false,
+      "clipped": []
+    },
+    {
+      "name": "chat-direct",
+      "viewportName": "desktop",
+      "url": "/management/communication",
+      "overflowX": 0,
+      "activeNav": [
+        "Chat"
+      ],
+      "sidebarBottom": 746,
+      "sidebarHeight": 746,
+      "footerBottom": 746,
+      "hasNextIndicator": false,
+      "timestampHasUpperMeridiem": false,
+      "clipped": []
+    },
+    {
+      "name": "schedule",
+      "viewportName": "desktop",
+      "url": "/management/calendar",
+      "overflowX": 0,
+      "activeNav": [
+        "Schedule"
+      ],
+      "sidebarBottom": 746,
+      "sidebarHeight": 746,
+      "footerBottom": 746,
+      "hasNextIndicator": false,
+      "timestampHasUpperMeridiem": false,
+      "clipped": []
+    },
+    {
+      "name": "profile",
+      "viewportName": "desktop",
+      "url": "/management/profile",
+      "overflowX": 0,
+      "activeNav": [
+        "Profile"
+      ],
+      "sidebarBottom": 746,
+      "sidebarHeight": 746,
+      "footerBottom": 746,
+      "hasNextIndicator": false,
+      "timestampHasUpperMeridiem": false,
+      "clipped": []
+    },
+    {
+      "name": "home",
+      "viewportName": "tablet",
+      "url": "/management",
+      "overflowX": 0,
+      "activeNav": [
+        "Home"
+      ],
+      "sidebarBottom": 144,
+      "sidebarHeight": 144,
+      "footerBottom": null,
+      "hasNextIndicator": false,
+      "timestampHasUpperMeridiem": true,
+      "clipped": []
+    },
+    {
+      "name": "institute",
+      "viewportName": "tablet",
+      "url": "/management/codes",
+      "overflowX": 0,
+      "activeNav": [
+        "Institute"
+      ],
+      "sidebarBottom": 144,
+      "sidebarHeight": 144,
+      "footerBottom": null,
+      "hasNextIndicator": false,
+      "timestampHasUpperMeridiem": false,
+      "clipped": []
+    },
+    {
+      "name": "chat",
+      "viewportName": "tablet",
+      "url": "/management/communication",
+      "overflowX": 0,
+      "activeNav": [
+        "Chat"
+      ],
+      "sidebarBottom": 144,
+      "sidebarHeight": 144,
+      "footerBottom": null,
+      "hasNextIndicator": false,
+      "timestampHasUpperMeridiem": false,
+      "clipped": []
+    },
+    {
+      "name": "schedule",
+      "viewportName": "tablet",
+      "url": "/management/calendar",
+      "overflowX": 0,
+      "activeNav": [
+        "Schedule"
+      ],
+      "sidebarBottom": 144,
+      "sidebarHeight": 144,
+      "footerBottom": null,
+      "hasNextIndicator": false,
+      "timestampHasUpperMeridiem": false,
+      "clipped": []
+    },
+    {
+      "name": "profile",
+      "viewportName": "tablet",
+      "url": "/management/profile",
+      "overflowX": 0,
+      "activeNav": [
+        "Profile"
+      ],
+      "sidebarBottom": 144,
+      "sidebarHeight": 144,
+      "footerBottom": null,
+      "hasNextIndicator": false,
+      "timestampHasUpperMeridiem": false,
+      "clipped": []
+    },
+    {
+      "name": "home",
+      "viewportName": "mobile",
+      "url": "/management",
+      "overflowX": 0,
+      "activeNav": [
+        "Home"
+      ],
+      "sidebarBottom": 0,
+      "sidebarHeight": 0,
+      "footerBottom": null,
+      "hasNextIndicator": false,
+      "timestampHasUpperMeridiem": true,
+      "clipped": []
+    },
+    {
+      "name": "institute",
+      "viewportName": "mobile",
+      "url": "/management/codes",
+      "overflowX": 0,
+      "activeNav": [
+        "Institute"
+      ],
+      "sidebarBottom": 0,
+      "sidebarHeight": 0,
+      "footerBottom": null,
+      "hasNextIndicator": false,
+      "timestampHasUpperMeridiem": false,
+      "clipped": []
+    },
+    {
+      "name": "chat",
+      "viewportName": "mobile",
+      "url": "/management/communication",
+      "overflowX": 0,
+      "activeNav": [
+        "Chat"
+      ],
+      "sidebarBottom": 0,
+      "sidebarHeight": 0,
+      "footerBottom": null,
+      "hasNextIndicator": false,
+      "timestampHasUpperMeridiem": false,
+      "clipped": []
+    },
+    {
+      "name": "schedule",
+      "viewportName": "mobile",
+      "url": "/management/calendar",
+      "overflowX": 0,
+      "activeNav": [
+        "Schedule"
+      ],
+      "sidebarBottom": 0,
+      "sidebarHeight": 0,
+      "footerBottom": null,
+      "hasNextIndicator": false,
+      "timestampHasUpperMeridiem": false,
+      "clipped": []
+    },
+    {
+      "name": "profile",
+      "viewportName": "mobile",
+      "url": "/management/profile",
+      "overflowX": 0,
+      "activeNav": [
+        "Profile"
+      ],
+      "sidebarBottom": 0,
+      "sidebarHeight": 0,
+      "footerBottom": null,
+      "hasNextIndicator": false,
+      "timestampHasUpperMeridiem": false,
+      "clipped": []
+    }
+  ],
+  "errors": []
+}

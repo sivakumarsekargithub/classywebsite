@@ -11,17 +11,18 @@ export function Footer({ onNavigate }: FooterProps) {
     <footer className="bg-navy text-navy-foreground/60 font-body">
       <div className="max-w-7xl mx-auto px-[5vw] py-8 flex flex-col gap-6">
         {/* Top row: Logo + Nav + Legal */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <button onClick={() => onNavigate("home")} className="flex items-center">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left">
+          <button type="button" onClick={() => onNavigate("home")} className="flex items-center rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-foreground/40" aria-label="Go to Classy home">
             <img src={classyLogo} alt="Classy" className="h-10 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
           </button>
-          <div className="flex flex-wrap gap-4 text-sm">
-            <button onClick={() => onNavigate("home")} className="hover:text-navy-foreground transition-colors">Home</button>
-            <button onClick={() => onNavigate("who")} className="hover:text-navy-foreground transition-colors">Who Needs Classy</button>
-            <button onClick={() => onNavigate("why")} className="hover:text-navy-foreground transition-colors">Why Classy</button>
-            <button onClick={() => onNavigate("pricing")} className="hover:text-navy-foreground transition-colors">Pricing</button>
-            <button onClick={() => onNavigate("getapp")} className="hover:text-navy-foreground transition-colors">Get the App</button>
-            <button onClick={() => onNavigate("signup")} className="hover:text-navy-foreground transition-colors">Contact</button>
+          <div className="flex flex-wrap justify-center md:justify-end gap-x-4 gap-y-2 text-sm">
+            <button type="button" onClick={() => onNavigate("home")} className="rounded-md hover:text-navy-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-foreground/40">Home</button>
+            <button type="button" onClick={() => onNavigate("who")} className="rounded-md hover:text-navy-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-foreground/40">Who Needs Classy</button>
+            <button type="button" onClick={() => onNavigate("why")} className="rounded-md hover:text-navy-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-foreground/40">Why Classy</button>
+            <button type="button" onClick={() => onNavigate("pricing")} className="rounded-md hover:text-navy-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-foreground/40">Pricing</button>
+            <button type="button" onClick={() => onNavigate("management")} className="rounded-md hover:text-navy-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-foreground/40">Management</button>
+            <button type="button" onClick={() => onNavigate("getapp")} className="rounded-md hover:text-navy-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-foreground/40">Get the App</button>
+            <button type="button" onClick={() => onNavigate("signup")} className="rounded-md hover:text-navy-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-foreground/40">Contact</button>
           </div>
         </div>
 

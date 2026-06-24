@@ -1,0 +1,144 @@
+{
+  "stats": [
+    {
+      "id": "classes",
+      "label": "Total Classes",
+      "value": "42",
+      "icon": "classes",
+      "chip": "bg-[#07885f]/10 text-[#07885f]"
+    },
+    {
+      "id": "teachers",
+      "label": "Teachers",
+      "value": "68",
+      "icon": "teachers",
+      "chip": "bg-green-500/10 text-green-600"
+    },
+    {
+      "id": "students",
+      "label": "Students",
+      "value": "1,247",
+      "icon": "students",
+      "chip": "bg-cyan-500/10 text-cyan-600"
+    },
+    {
+      "id": "exam",
+      "label": "Avg. Exam %",
+      "value": "76.4%",
+      "icon": "exam",
+      "chip": "bg-amber/10 text-amber"
+    }
+  ],
+  "classes": [
+    {
+      "id": "10-a",
+      "name": "Class 10-A",
+      "students": 35,
+      "absent": 3,
+      "teacher": "Mr. Johnson",
+      "flaggedStudent": "Rahul S.",
+      "flagReason": "Repeated misconduct"
+    },
+    {
+      "id": "10-b",
+      "name": "Class 10-B",
+      "students": 33,
+      "absent": 1,
+      "teacher": "Ms. Williams"
+    },
+    {
+      "id": "9-a",
+      "name": "Class 9-A",
+      "students": 38,
+      "absent": 5,
+      "teacher": "Dr. Smith"
+    },
+    {
+      "id": "9-b",
+      "name": "Class 9-B",
+      "students": 36,
+      "absent": 2,
+      "teacher": "Mrs. Davis"
+    },
+    {
+      "id": "8-a",
+      "name": "Class 8-A",
+      "students": 40,
+      "absent": 4,
+      "teacher": "Mr. Lee"
+    }
+  ],
+  "teachers": [
+    {
+      "id": "johnson",
+      "name": "Mr. Johnson",
+      "subject": "Mathematics",
+      "timetable": "Mon-Fri, 8AM-2PM",
+      "classes": "10-A, 9-A",
+      "late": 2,
+      "leaves": 3
+    },
+    {
+      "id": "williams",
+      "name": "Ms. Williams",
+      "subject": "English",
+      "timetable": "Mon-Fri, 8AM-1PM",
+      "classes": "10-B, 8-A",
+      "late": 0,
+      "leaves": 1
+    },
+    {
+      "id": "smith",
+      "name": "Dr. Smith",
+      "subject": "Physics",
+      "timetable": "Mon-Fri, 9AM-3PM",
+      "classes": "9-A, 10-A",
+      "late": 5,
+      "leaves": 0
+    },
+    {
+      "id": "davis",
+      "name": "Mrs. Davis",
+      "subject": "History",
+      "timetable": "Mon-Thu, 8AM-2PM",
+      "classes": "9-B, 10-B",
+      "late": 0,
+      "leaves": 2
+    }
+  ],
+  "students": [
+    {
+      "id": "arjun",
+      "name": "Arjun Kumar",
+      "className": "Class 10-A",
+      "feeStatus": "Paid",
+      "parent": "Mr. Raj Kumar",
+      "contact": "+91 98765 43210",
+      "address": "Springfield",
+      "marks": "82%",
+      "remarks": [
+        "Math: Excellent",
+        "English: Good"
+      ],
+      "award": "Science Olympiad Gold"
+    },
+    {
+      "id": "priya",
+      "name": "Priya Sharma",
+      "className": "Class 10-A",
+      "feeStatus": "Pending"
+    },
+    {
+      "id": "vikram",
+      "name": "Vikram Singh",
+      "className": "Class 9-A",
+      "feeStatus": "Paid"
+    },
+    {
+      "id": "neha",
+      "name": "Neha Patel",
+      "className": "Class 9-B",
+      "feeStatus": "Paid"
+    }
+  ]
+}
